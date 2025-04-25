@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodEvents - Discover Events Based on Your Mood</title>
+    <!-- Add animations support -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-fadeIn {
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+        animation-fill-mode: both;
+      }
+      
+      @keyframes pulse {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+      
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    </style>
+    <!-- Add Leaflet CSS -->
+    <link 
+      rel="stylesheet" 
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
